@@ -61,6 +61,7 @@ ol {
 }
 .written {
  	float: left;
+ 	font-size: 30px;
 }
 .right {
 	float: right;
@@ -142,3 +143,25 @@ textarea {
 	margin: 20px 0px;
 }
 
+.finish {
+	display: none;
+}
+
+.finish.active {
+	position: absolute;
+	border-radius: 30px;
+	height: 290px;
+	width: 500px;
+	z-index: 1;
+	margin-left: 23%;
+	margin-top: 3%;
+	font-size: 80px;
+	font-family: 'Cabin Sketch', cursive;
+	/*background-color: RGB(58, 140, 0);*/
+	background-color: white;
+	border: RGB(58, 140, 0);
+	color: black;
+	opacity: 0.7;
+	display: block;
+	text-align: center;
+}
