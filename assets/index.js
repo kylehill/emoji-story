@@ -37,7 +37,7 @@ $(document).on("ready", function() {
 			$(".current-emoji").text(emoji[0])
 	    var startTime = new Date().valueOf()
 
-			var count = 25
+			var count = 5
 			var i = 0
 			var timer = setInterval(function(){
 
@@ -50,16 +50,17 @@ $(document).on("ready", function() {
 
 				if (count < .1) {
 
-					count = 25	    		
+					count = 5	    		
 					$("#written").append($(".current-emoji").text())
 		    		$("#written").append($("#writing").val())
 		    		$("#writing").val("")
 			    	i++
 		    		$(".current-emoji").text(emoji[i])
 
-		    	if (((new Date().valueOf() - 125000) > startTime)) {
+		    	if (((new Date().valueOf() - 25000) > startTime)) {
 						clearInterval(timer)
 						postContent(emoji, $("#written").text())
+						$(".finish").addClass("active")
 					}
 
 				}
